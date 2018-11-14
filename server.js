@@ -42,13 +42,19 @@ app.get('/', (request, response) => {
   // response.send('<h1>Hello Express!</h1>');
   response.render('home.hbs', {
     pageTitle: 'Home',
-    welcomeMessage: 'Hello you filthy animals'
+    welcomeMessage: 'Hello! Welcome to my site!'
   });
 });
 
 app.get('/about', (request, response) => {
   response.render('about.hbs', {
     pageTitle: 'About',
+  });
+});
+
+app.get('/projects', (request, response) => {
+  response.render('projects.hbs', {
+    pageTitle: 'Projects',
   });
 });
 
